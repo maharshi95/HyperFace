@@ -8,6 +8,8 @@ from model import HyperFaceModel
 C = Config()
 H = Hyperparams()
 
+load_weights = False
+
 # Create Required Directories
 for path in [C.models_path, C.best_models_path, C.log_path['train'], C.log_path['test']]:
     if not os.path.exists(path):

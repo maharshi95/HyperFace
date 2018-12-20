@@ -7,6 +7,7 @@ class Hyperparams:
 
     num_epochs = 10
 
+    # As per the Paper
     weight_detect = 1
     weight_landmarks = 5
     weight_visibility = 0.5
@@ -14,6 +15,6 @@ class Hyperparams:
     weight_gender = 2
 
     save_after_steps = 200
-    print_after_steps = 1
+    print_after_steps = 10
     log_after_steps = 10
     val_after_steps = 100

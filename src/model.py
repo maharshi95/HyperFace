@@ -145,4 +145,4 @@ class HyperFaceModel(object):
         self.saver.save(self.session, self.C.models_path, global_step=global_step)
 
     def save_best_model(self, global_step):
-        self.best_saver.save(self.session, self.C.models_path, global_step=global_step)
+        self.best_saver.save(self.session, self.C.best_models_path, global_step=global_step)
