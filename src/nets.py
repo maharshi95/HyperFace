@@ -5,7 +5,7 @@ from tensorflow.contrib import slim
 from utils import NetOutput
 
 
-def hyperface_alexnet(inputs, name='hyperface-alexnet'):
+def hyperface_alexnet(inputs, name='hyperface_alexnet'):
     with tf.variable_scope(name, reuse=tf.AUTO_REUSE):
         with slim.arg_scope([slim.conv2d, slim.fully_connected],
                             activation_fn=tf.nn.relu,
@@ -44,3 +44,7 @@ def hyperface_alexnet(inputs, name='hyperface-alexnet'):
             out_gender = slim.fully_connected(fc_gender, 1, scope='gender', activation_fn=None)
 
         return NetOutput(out_detection, out_landmarks, out_visibility, out_pose, out_gender)
+
+
+def hyperface_resnet(inputs, name='hyperface_resnet'):
+    pass
